@@ -4,7 +4,7 @@
 
 ## Team Members & Responsibilities
 | Member | Student ID | Full Name | Role & Stages |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | **Member 1** | IT24100105 | Gamage K.G.T.P. | CTF Platform & Architecture (CTFd, Docker, Stage 101) |
 | **Member 2** | IT24102703 | Gunawardena D.H. | Challenge Design A (Stages 1, 2, 3) |
 | **Member 3** | IT24102119 | Ashwin S. | Challenge Design B (Stages 4, 5, 6) |
