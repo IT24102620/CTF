@@ -177,7 +177,7 @@ whoami
 - Open Autopsy -> New Case -> Add Data Source -> Disk Image or VM File
 - Select "evidence_drive.dd"
 - Navigate to: Data Sources -> evidence_drive.dd -> $OrphanFiles (or Views -> Deleted Files)
-- Right-click "secret_backup.zip" -> Extract File(s)
+- Right-click "sys_cache.zip" -> Extract File(s)
 
 // 2. Extract the password hash from the recovered ZIP file
 zip2john secret_backup.zip > zip.hash
