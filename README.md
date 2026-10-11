@@ -220,48 +220,16 @@ python3 -c 'print("".join(chr(b ^ 0x5A) for b in [0x28, 0x69, 0x2c, 0x69, 0x28, 
 // 4. Run the binary in terminal and enter the passphrase to get the flag
 .\obsidian_core.exe
 
-// 5. Alternative: Directly decode the encrypted flag array from reveal_flag()
-python3 -c 'enc = [0x35,0x38,0x29,0x33,0x3E,0x33,0x3B,0x34,0x21,0x22,0x6A,0x28,0x05,0x39,0x6A,0x28,0x69,0x05,0x36,0x6A,0x3D,0x6B,0x39,0x05,0x28,0x69,0x2C,0x69,0x28,0x29,0x69,0x3E,0x27]; print("".join(chr(b ^ 0x5A) for b in enc))'
 ```
 
 ---
 
-## 4. Environment Reset & Container Isolation Verification
-To reset the environment back to a clean baseline or verify container security and network isolation from Windows PowerShell / CMD:
-
-```powershell
-# 1. Remove player-created PATH hijacking files in Stage 04
-docker exec obsidian_linux rm -f /tmp/cat
-
-# 2. Restart target containers to clear active sessions
-docker compose restart
-
-# 3. Verify Host Gateway & ensure Docker API (Port 2375) and SMB (Port 445) are unreachable
-docker inspect obsidian_linux --format "{{range .NetworkSettings.Networks}}{{.Gateway}}{{end}}"
-docker exec obsidian_linux bash -c "timeout 2 bash -c '</dev/tcp/172.17.0.1/2375' && echo OPEN || echo BLOCKED_OR_CLOSED"
-docker exec obsidian_linux bash -c "timeout 2 bash -c '</dev/tcp/172.17.0.1/445' && echo OPEN || echo BLOCKED_OR_CLOSED"
-
-# 4. Verify Docker socket is NOT mounted inside the container
-docker exec obsidian_linux ls -la /var/run/docker.sock
-
-# 5. Confirm container namespace isolation, restricted Linux capabilities, and non-privileged execution
-docker exec obsidian_linux hostname
-docker exec obsidian_linux cat /proc/1/cgroup
-docker exec obsidian_linux cat /proc/1/status | findstr Cap
-docker inspect obsidian_linux --format "{{.HostConfig.Privileged}}"
-
-# 6. Run automated CTF validation suite (LO3)
-python3 validate_ctf.py
-```
-
----
-
-## 5. GitHub Repository & Source Code
+## 4. GitHub Repository & Source Code
 https://github.com/IT24102620/CTF
 
 ---
 
-## 6. Acknowledgments & Third-Party Tools
+## 5. Acknowledgments & Third-Party Tools
 * **CTFd** (https://ctfd.io/) – Open-source CTF scoring and hosting framework.
 * **Docker & Docker Compose** – Containerization and network isolation.
 * **Steghide & Stegseek** – Steganography embedding and passphrase recovery.
