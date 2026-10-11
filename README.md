@@ -224,7 +224,9 @@ python3 -c 'print("".join(chr(b ^ 0x5A) for b in [0x28, 0x69, 0x2c, 0x69, 0x28, 
 
 ---
 
-## 4. GitHub Repository & Source Code
+## 4. Video Link & GitHub Repository
+https://mysliit-my.sharepoint.com/:f:/g/personal/it24102119_my_sliit_lk/IgCIqwe-4HMJT5DaSC1j0sEvAc2NMugkwC8QBhPn-hrWJb4?e=6WfOdX
+
 https://github.com/IT24102620/CTF
 
 ---
