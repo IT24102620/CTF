@@ -1,4 +1,4 @@
-# CTF - Operation Obsidian — 6-Stage CTF Play Box
+# Operation Obsidian — 6-Stage CTF Play Box
 **Module:** IE3132 – Penetration Testing and Defense (Assignment 02)  
 **Institution:** Sri Lanka Institute of Information Technology (SLIIT)  
 
