@@ -3,12 +3,12 @@
 **Institution:** Sri Lanka Institute of Information Technology (SLIIT)  
 
 ## Team Members & Responsibilities
-| Member | Student ID | Full Name | Role & Stages | LO3 Self-Developed Script |
+| Member | Student ID | Full Name | Role & Stages |
 | :--- | :--- | :--- | :--- | :--- |
-| **Member 1** | IT24100105 | Gamage K.G.T.P. | CTF Platform & Architecture (CTFd, Docker, Stage 101) | `reset_box.sh` |
-| **Member 2** | IT24102703 | Gunawardena D.H. | Challenge Design A (Stages 1, 2, 3) | `exploit_web.py` |
-| **Member 3** | IT24102119 | Ashwin S. | Challenge Design B (Stages 4, 5, 6 + C Binary) | `obsidian_core.c` / `solve_re_forensics.py` |
-| **Member 4** | IT24102620 | Shiamkumar J. | Integration, Testing & Documentation | `validate_ctf.py` |
+| **Member 1** | IT24100105 | Gamage K.G.T.P. | CTF Platform & Architecture (CTFd, Docker, Stage 101) |
+| **Member 2** | IT24102703 | Gunawardena D.H. | Challenge Design A (Stages 1, 2, 3) |
+| **Member 3** | IT24102119 | Ashwin S. | Challenge Design B (Stages 4, 5, 6) |
+| **Member 4** | IT24102620 | Shiamkumar J. | Integration, Testing & Documentation |
 
 ---
 
