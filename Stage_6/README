@@ -1,0 +1,21 @@
+// 1. Cross-compile the challenge binary on Kali (Builder Step)
+x86_64-w64-mingw32-gcc obsidian_core.c -o obsidian_core.exe
+
+// 2. Load the binary into Ghidra for static analysis (GUI Steps)
+- Open Ghidra -> File -> Import File -> Select "obsidian_core.exe"
+- Double-click "obsidian_core.exe" to open CodeBrowser and run default Auto-Analysis
+- Navigate to: Symbol Tree -> Functions -> main
+- Double-click "check_pass" inside the Decompiler window
+
+// 3. Identify the XOR logic and encrypted passphrase in check_pass
+- Input length check: 7 characters
+- Bitwise XOR key: 0x5A
+- Comparison string in memory: "(i,i()i" (Hex: 28 69 2c 69 28 29 69)
+
+// 4. Decode the passphrase using Python (or CyberChef)
+python3 -c 'print("".join(chr(b ^ 0x5A) for b in [0x28, 0x69, 0x2c, 0x69, 0x28, 0x29, 0x69]))'
+# Output: r3v3rs3
+
+// 5. Run the binary in terminal and enter the passphrase to get the flag
+.\obsidian_core.exe
+Enter the passphrase: r3v3rs3
